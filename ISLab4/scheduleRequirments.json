@@ -1,0 +1,82 @@
+[
+  {
+    "SubjectId": 1,
+    "GroupId": 1,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 1,
+    "GroupId": 2,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 1,
+    "GroupId": 3,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 1,
+    "GroupId": 4,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 2,
+    "GroupId": 1,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 2,
+    "GroupId": 2,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 2,
+    "GroupId": 3,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 2,
+    "GroupId": 4,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 4,
+    "GroupId": 1,
+    "Hours": 21
+  },
+  {
+    "SubjectId": 4,
+    "GroupId": 2,
+    "Hours": 21
+  },
+  {
+    "SubjectId": 4,
+    "GroupId": 3,
+    "Hours": 21
+  },
+  {
+    "SubjectId": 4,
+    "GroupId": 4,
+    "Hours": 21
+  },
+  {
+    "SubjectId": 5,
+    "GroupId": 1,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 5,
+    "GroupId": 2,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 5,
+    "GroupId": 3,
+    "Hours": 42
+  },
+  {
+    "SubjectId": 5,
+    "GroupId": 4,
+    "Hours": 42
+  }
+]

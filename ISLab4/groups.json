@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "G1",
+    "Count": 30,
+    "Subgroup": 1,
+    "Id": 1
+  },
+  {
+    "Name": "G1",
+    "Count": 30,
+    "Subgroup": 2,
+    "Id": 2
+  },
+  {
+    "Name": "G2",
+    "Count": 25,
+    "Subgroup": 1,
+    "Id": 3
+  },
+  {
+    "Name": "G2",
+    "Count": 25,
+    "Subgroup": 2,
+    "Id": 4
+  },
+  {
+    "Name": "G3",
+    "Count": 35,
+    "Subgroup": 1,
+    "Id": 5
+  },
+  {
+    "Name": "G3",
+    "Count": 35,
+    "Subgroup": 2,
+    "Id": 6
+  }
+]

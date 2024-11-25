@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "R1",
+    "Capacity": 30,
+    "Id": 1
+  },
+  {
+    "Name": "R2",
+    "Capacity": 25,
+    "Id": 2
+  },
+  {
+    "Name": "R3",
+    "Capacity": 35,
+    "Id": 3
+  }
+]

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 
@@ -124,13 +125,13 @@ class Program
 
     static void Main()
     {
-        using FileStream openStreamGroups = File.OpenRead("groups.json");
+        using FileStream openStreamGroups = File.OpenRead("../../../groups.json");
         groups = JsonSerializer.Deserialize<List<Group>>(openStreamGroups);
-        using FileStream openStreamRooms = File.OpenRead("rooms.json");
+        using FileStream openStreamRooms = File.OpenRead("../../../rooms.json");
         rooms = JsonSerializer.Deserialize<List<Room>>(openStreamRooms);
-        using FileStream openStreamTeachers = File.OpenRead("teachers.json");
+        using FileStream openStreamTeachers = File.OpenRead("../../../teachers.json");
         teachers = JsonSerializer.Deserialize<List<Teacher>>(openStreamTeachers);
-        using FileStream openStreamSubjects = File.OpenRead("subjects.json");
+        using FileStream openStreamSubjects = File.OpenRead("../../../subjects.json");
         subjects = JsonSerializer.Deserialize<List<Subject>>(openStreamSubjects);
 
         var scheduleRequirments = new List<ScheduleRequirment>
@@ -391,9 +392,10 @@ class Program
 
     static void ExportToCsv(List<ScheduleSlot> schedule, List<ScheduleRequirment> scheduleRequirments)
     {
+        var path = Environment.CurrentDirectory;
         var csvContent = new StringBuilder();
         csvContent.AppendLine("Day,Pair,Group,Subject,Type,Teacher,Room");
-        using StreamWriter csvFile = new StreamWriter("Schedule.csv");
+        using StreamWriter csvFile = new StreamWriter("../../../Schedule.csv");
         csvFile.WriteLine("Day,Pair,Group,Subject,Type,Teacher,Room");
         foreach (var item in schedule.OrderBy(x => x.TimeSlot))
         {

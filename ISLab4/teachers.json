@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "T1",
+    "SubjectIds": [
+      1,
+      4
+    ],
+    "Id": 1
+  },
+  {
+    "Name": "T2",
+    "SubjectIds": [
+      2,
+      5,
+      1
+    ],
+    "Id": 2
+  },
+  {
+    "Name": "T3",
+    "SubjectIds": [
+      3,
+      6,
+      1
+    ],
+    "Id": 3
+  }
+]
