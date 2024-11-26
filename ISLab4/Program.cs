@@ -175,7 +175,7 @@ class Program
         };
 
         scheduleRequirments = new List<ScheduleRequirment>();
-        using FileStream openStreamscheduleRequirmentsDTOs = File.OpenRead("scheduleRequirments.json");
+        using FileStream openStreamscheduleRequirmentsDTOs = File.OpenRead("../../../scheduleRequirments.json");
         List<ScheduleRequirmentDTO> scheduleRequirmentDTOs = JsonSerializer.Deserialize<List<ScheduleRequirmentDTO>>(openStreamscheduleRequirmentsDTOs);
         int index = 1;
         foreach (var item in scheduleRequirmentDTOs)
@@ -190,7 +190,7 @@ class Program
 
         var schedule = new List<ScheduleSlot>();
 
-        if (BacktrackingSearch(schedule, scheduleRequirments, EvristicType.Degree))
+        if (BacktrackingSearch(schedule, scheduleRequirments, EvristicType.MRV))
         {
             Console.WriteLine("Розклад складено:");
             foreach (var item in schedule.OrderBy(x => x.TimeSlot))
@@ -234,8 +234,8 @@ class Program
         if (evristicType == EvristicType.MRV)
         {
             scheduleRequirment = scheduleRequirments
-                .OrderBy(x => schedule.Where(s => scheduleRequirments.FirstOrDefault(r => r.Id == s.ScheduleRequirmentId).GroupId == x.GroupId).Count())
-                .ThenBy(x => schedule.Where(s => scheduleRequirments.FirstOrDefault(r => r.Id == s.ScheduleRequirmentId).SubjectId == x.SubjectId).Count())
+                .OrderByDescending(x => schedule.Where(s => scheduleRequirments.FirstOrDefault(r => r.Id == s.ScheduleRequirmentId).GroupId == x.GroupId).Count())
+                .ThenByDescending(x => schedule.Where(s => scheduleRequirments.FirstOrDefault(r => r.Id == s.ScheduleRequirmentId).SubjectId == x.SubjectId).Count())
                 .FirstOrDefault(x => !schedule.Select(s => s.ScheduleRequirmentId).Contains(x.Id));
         }else if(evristicType == EvristicType.Degree)
         {
